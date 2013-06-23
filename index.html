@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr" ng-app="albatros">
+<head>
+	<meta charset="UTF-8">
+	<title>Albatross Rss Reader</title>
+	<link rel="stylesheet" href="app/components/normalize-css/normalize.css">
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	
+	<aside id="sidebar" ng-controller="sidebarCtrl">
+		<div ng-include src="path"></div>
+	</aside>
+
+
+	<div class="main"  ng-view></div>
+
+	<script src="app/components/angular/angular.min.js"></script>
+	<script src="app/module.js"></script>
+	<script src="app/controllers/homeCtrl.js"></script>
+	<script src="app/controllers/sidebarCtrl.js"></script>
+	<script src="app/controllers/feedCtrl.js"></script>
+</body>
+</html>
