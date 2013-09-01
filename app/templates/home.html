@@ -1,0 +1,53 @@
+<div class="feed-list">
+			
+	<h2 class="feed-list-title">Dernières actus</h2>
+
+	<div class="feed-search">
+		<input type="search" name="search-feed" id="search-feed" ng-model="searchCurrentFeed" />
+	</div>
+
+	<ul>
+		<li ng-repeat="feed in feeds | filter:searchCurrentFeed" ng-click="read(feed)">
+			<input type="checkbox" name="feed-{{$index + 1}}" id="feed-{{$index + 1}}" ng-checked="feed.read" ng-model="feed.read" />
+			<article>
+				<h3>{{feed.title}}</h3>
+				<time>{{feed.date}}</time>
+				<p>{{feed.description}}</p>
+			</article>
+		</li>		
+	</ul>
+</div>
+
+<article class="feed-element" ng-show="f_read.title">
+	<header>
+		<h1 class="feed-title">{{f_read.title}}</h1>
+		<span class="feed-author">{{f_read.author}}</span>
+		<a ng-href="{{f_read.url}}" class="feed-permalink">Permalink</a>
+		<time class="feed-date">{{f_read.date}}</time>
+	</header>
+
+	<div class="feed-content" ng-bind-html-unsafe="f_read.content"></div>
+</article>
+
+<article class="feed-element" ng-show="!f_read.title">
+
+	<header>
+		<h1 class="feed-title">Vos dernières lectures</h1>
+		<a href="/" class="feed-permalink">Site Web</a>
+		<time class="feed-date">{{home.date | date:'medium'}}</time>
+	</header>
+
+	<div class="feed-content">
+		<ul class="feed-read">
+			<li ng-repeat="feed in home.latest">
+				<article>
+					<h3>{{feed.title}}</h3>
+					<time>{{feed.date}}</time>
+					<p>{{feed.description}}</p>
+					<button type="button">Relire</button>
+				</article>
+			</li>		
+		</ul>
+
+	</div>
+</article>

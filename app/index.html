@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr_FR" ng-app="albatros">
+<head>
+	<meta charset="UTF-8">
+	<title>Bonjour</title>
+	<link rel="stylesheet" href="components/normalize-css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="app-header">
+
+		<h1><a href="/">Albatross Rss Feed Reader</a></h1>
+		
+		<button id="addfeed" class="btn" type="button">Add a new Feed</button>
+		
+	</header>
+
+	<section id="sidebar">
+		
+		<nav class="app-user">
+
+			<div class="app-user-avatar"></div>
+			<h2 ng-click="userMenuShow = !userMenuShow">Dhoko</h2>
+
+			<ul class="app-user-menu-dropdown" ng-show="userMenuShow">
+				<li><a href="/#/options">Options</a></li>
+				<li><a href="/#/logout">Logout</a></li>
+			</ul>
+		</nav>
+
+		<nav class="navigation">
+			<ul>
+				<li><a href="/feeds">Flux non lus <span class="counter" ng-show="unread">{{unread}}</span></a></li>
+				<li><a href="/reads">Flux Rss</a></li>
+			</ul>
+		</nav>
+
+		<hr class="line" />
+
+		<nav class="feed">
+			<ul>
+				<li><a href="#">Twitter dhoko</a></li>
+				<li><a href="#">Twitter Aymeric</a></li>
+				<li><a href="#">Planet Libre</a></li>
+				<li><a href="#">Shaarlo</a></li>
+				<li><a href="#">Fredzone</a></li>
+			</ul>
+		</nav>
+
+	</section>
+
+	<section id="content" ng-view>
+
+	</section>
+	
+	<script src="components/angular/angular.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/services/feedsService.js"></script>
+	<script src="js/controllers/homeCtrl.js"></script>
+	<script src="js/controllers/optionsCtrl.js"></script>
+	<script src="js/controllers/feedCtrl.js"></script>
+</body>
+</html>

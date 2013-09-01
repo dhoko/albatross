@@ -1,0 +1,274 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+body { font-family: 'Open Sans', sans-serif}
+
+a { text-decoration: none; color : #44c4e7}
+a:hover { text-decoration: underline}
+li { list-style: none}
+
+.btn {
+	background: #ecf0f1;
+	border: 1px solid transparent;
+	color: black;
+	margin: 1em 1.5em;
+	font-weight: 400;
+	border-radius: 4px;
+	text-align: center;
+	padding: .5em 1em
+}
+.btn:hover {
+	box-shadow: inset 0 -2px 3px #95a5a6;
+	border: 1px solid #95a5a6
+}
+.btn:active { border: 1px solid black}
+
+#addfeed { float: right}
+
+#sidebar {
+	background: #343939;
+	color: white;
+	position: fixed;
+	top: 80px;
+	bottom: 0;
+	max-width: 250px;
+	min-width: 250px;
+	width: 30%
+}
+#sidebar a {
+	color: #999;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 100%
+}
+#sidebar li:hover a { color: #ecf0f1}
+#sidebar li {
+	-webkit-transition: background-color .3s ease;
+	   -moz-transition: background-color .3s ease;
+			transition: background-color .3s ease;
+	padding: 10px 30px
+}
+#sidebar li:hover, #sidebar li.active {	background: #9b59b6}
+#sidebar ul { padding: 0}
+
+.app-user h2 {
+	padding: 0 1.2em;
+	color: #ecf0f1;
+	font-size: 1.2em
+}
+.app-user-avatar {
+	float: left;
+	width: 32px;
+	height: 32px;
+	background: white;
+	margin-left: 2em;
+	margin-right: 0.5em
+}
+
+.counter {
+	float: right;
+	display: block;
+	background: #9b59b6;
+	color: white;
+	padding: .3em;
+	border-radius: 3px;
+	font-weight: bold;
+	font-size: .8em
+}
+.line {
+	height: 1px;
+	background: #555;
+	border: 0
+}
+.feed li { font-size: .8em}
+
+.app-header {
+	height: 80px;
+	background: #1abc9c;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 42
+}
+.app-header h1 {
+	width: 250px;
+	background: #16a085;
+	height: 80px;
+	margin: 0;
+	font-size: 24px;
+	padding: .5em 1em .5em 1.5em;
+	line-height: 1.1em;
+	font-weight: 400;
+	float: left
+}
+.app-header a {	color: white; text-shadow: 0px 1px 2px rgb(107, 107, 107)}
+
+#content {
+	position: absolute;
+	right: 0;
+	width: -webkit-calc(100% - 250px);
+	top: 80px;
+	left: 250px;
+	bottom: 0
+}
+
+#search-feed {
+	width: 100%;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	padding: 10px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.feed-list {
+	width: 30%;
+	border-right: 1px solid #DDD;
+	font-size: 16px;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	max-height: 100%
+}
+.feed-element {
+	padding: 1em;
+	float: right;
+	width: 70%
+}
+
+.feed-list ul {
+	font-size: .85em;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 169px;
+	max-height: 100%;
+	overflow: auto;
+	bottom: 0;
+	width: 100%
+}
+
+.feed-list h3 {
+	margin: 0;
+	font-weight: 400;
+	color: #333
+}
+.feed-list h3 a {color: #333}
+.feed-list p { color: #888;.margin: 5px 0}
+.feed-list li {
+	background: #F8F6F4;
+	transition: background-color .3s ease;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 10px 20px;
+	cursor: pointer;
+}
+.feed-list li:hover { background: #E4E4E4}
+.feed-list li.unread { background: #fff; border-right: 3px solid #e74c3c }
+.feed-list li.active { background: #fd9162;	border-right: 3px solid rgba(0, 0, 0, 0.1)}
+.feed-list article {margin-left: 1.1em}
+
+.feed-list input[type="checkbox"] {
+	float: left;
+	margin-top: 1em;
+	margin-left: -.5em;
+	width: 1.2em;
+	height: 1.2em;
+	opacity: .5;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	-webkit-appearance: none
+}
+
+.feed-title {
+	color: rgb(68, 64, 64);
+	border-bottom: 1px solid #ddd;
+	font-size: 1.4em;
+	padding-bottom: 1em
+}
+.feed-content {
+	color: #555454;
+	line-height: 1.65em;
+	margin-top: 2em
+}
+.feed-element header {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 1em
+}
+.feed-search {
+	background: #FCFCFC;
+	padding: 1.2em
+}
+
+.feed-list-title {
+	margin: 0;
+	padding: 1.1em;
+	font-weight: 400;
+	color: #777;
+	border-bottom: 1px solid #DDD;
+}
+.feed-date {float: right}
+.feed-author, .feed-date {color: #aaa}
+
+.feed-read article { position: relative }
+.feed-read time {
+	position: absolute;
+	top: 0;
+	right: 0
+}
+.feed-read button {
+	position: absolute;
+	right: 0;
+	background: #44c4e7;
+	padding: .3em 1em;
+	border: 1px solid #3FA7C3
+}
+.feed-read button:hover {
+	border-color: #2E7A8F;
+	color: white;
+	background: #39A8C7
+}
+.feed-read button:active { border-color: black}
+.options fieldset {
+	display: inline-block;
+	width: 49%;
+	vertical-align: top;
+	background: rgb(250, 250, 250);
+	padding: 1em;
+	font-size: .9em;
+	color: #333;
+	min-height: 230px
+}
+
+.panel {padding: 1em}
+.options legend {font-weight: bold}
+.row { margin-bottom: 1em}
+
+.row input {
+	padding: .2em .5em;
+	border: 1px solid #aaa;
+	width: 70%;
+}
+.row label {
+	display: inline-block;
+	width: 25%;
+	vertical-align: middle
+}
+.options button {
+	background: #44c4e7;
+	border: 1px solid transparent;
+	color: white;
+	margin: 1em 1.5em;
+	font-weight: 400;
+	border-radius: 4px;
+	text-align: center;
+	padding: .5em 1em
+}
+.options legend + .row { margin-top: 2em}
