@@ -1,8 +1,0 @@
-<li class="feed-category" ng-repeat="feed in feeds" ng-Click="item =!item" ng-class="{active: item}">
-	<h3>{{feed.category}}</h3>
-	<ul class="sub-category" ng-show="item">
-		<li ng-repeat="subfeed in feed.items" ng-class="{active: isSelected}" ng-Click="isSelected =!isSelected">
-			<a ng-href="{{subfeed.url}}" title="{{subfeed.about}}">{{subfeed.title}}</a>
-		</li>
-	</ul>
-</li>

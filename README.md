@@ -1,1 +1,3 @@
-A simple feed reader.
+Simple feed reader. 
+
+RSS FTW !
