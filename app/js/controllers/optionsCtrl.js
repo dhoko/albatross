@@ -4,7 +4,9 @@ albatros.controller('optionsCtrl', [
 	'$scope','$routeParams','$location',
 	function ($scope, $routeParams, $location) {
 
-	console.log('Profile')
-	console.log($routeParams)
+
+  var yesy =   "";
+	console.log($routeParams);
+  alert('Bonjour Robert  -- Dhoko de');
 
 }])

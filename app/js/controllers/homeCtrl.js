@@ -6,11 +6,11 @@ albatros.controller('homeCtrl', [
 
 	// Find each feeds
 	$scope.feeds = feeds.get();
-	$scope.f_read = {};	
+	$scope.f_read = {};
 	$scope.home = {
 		date : new Date(),
 		latest : [feeds.get(3)]
-	};	
+	};
 
 	// If a route params exist we show the good post
 	if(~~$routeParams.id) {
@@ -33,6 +33,8 @@ albatros.controller('homeCtrl', [
 		$location.path('/' + feed.id + '/' + name);
 		// Mark the feed as read
 		feed.read = true;
+
+    alert('ok')
 	}
 
 	console.log($routeParams)
