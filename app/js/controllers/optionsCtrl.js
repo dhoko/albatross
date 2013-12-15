@@ -7,6 +7,7 @@ albatros.controller('optionsCtrl', [
 
   var yesy =   "";
 	console.log($routeParams);
-  alert('Bonjour Robert  -- Dhoko de');
+
+  alert('Bonjour Robert  -- Dhoko de demp --'  _;
 
 }])

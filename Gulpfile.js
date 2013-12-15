@@ -7,18 +7,19 @@ var lr      = require('tiny-lr'),
     stylish = require('jshint-stylish'),
     path    = require('path');
 
-gulp.task('scripts:dev', function () {
-  gulp.src('./app/js/**/*.js')
-    // .pipe(jshint())
+gulp.task('scripts', function () {
+  gulp.src('app/js/**/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter(require(stylish)))
     .pipe(refresh(server));
 });
 
 gulp.task('watch', function () {
   server.listen(35729, function (err) {
     if (err) return console.log(err);
-
     gulp.watch('app/js/**/*.js', function (e) {
-      gulp.run('jshint','scripts:dev');
+      // gulp.run('jshint','scripts');
+      gulp.run('scripts');
     });
   });
 });
